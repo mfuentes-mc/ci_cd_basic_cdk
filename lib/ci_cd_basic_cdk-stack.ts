@@ -30,6 +30,9 @@ export class CiCdBasicCdkStack extends cdk.Stack{
     testingStage.addPost(new ManualApprovalStep('Manual approval before production'));
 
 
+
+    
+
     const prodStage = pipeline.addStage(new MyPipelineAppStage(this,"prod",{
       env:{
         account: '108072982334',
